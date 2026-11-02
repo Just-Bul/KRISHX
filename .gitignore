@@ -1,0 +1,128 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+.venv
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+dist/
+dist-ssr/
+*.local
+
+# Model files (large binary files)
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.pb
+*.tflite
+
+# Dataset files (large image datasets)
+backend/dataset/
+backend/pest/
+
+# Analysis output files (generated files)
+backend/analysis_output/*.png
+backend/analysis_output/*.csv
+backend/pest_model/*.png
+backend/pest_model/*.csv
+backend/pest_model/*.h5
+backend/pest_model/*.json
+
+# Keep documentation in analysis_output
+!backend/analysis_output/*.md
+!backend/analysis_output/README.md
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# CSV data files (uncomment if you don't want to track CSV files)
+# *.csv
+
+# Keep train.csv and test.csv for reference
+!backend/dataset/train.csv
+!backend/dataset/test.csv
+
+
+# Local databases / user data
+*.db
+
+# Local dataset copy and tooling
+dataset2/
+.claude/
+mobile/.git_nested_backup/

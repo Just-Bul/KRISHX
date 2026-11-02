@@ -1,0 +1,23 @@
+# KRISHX Production Dependencies
+# For local dev use requirements.txt; this file adds gunicorn + headless OpenCV.
+
+tensorflow>=2.13.0
+keras>=3.11.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+Pillow>=10.0.0
+flask>=2.3.0
+flask-cors>=4.0.0
+# headless variant — no GUI/display dependencies (required in containers)
+opencv-python-headless>=4.8.0
+PyJWT>=2.8.0
+bcrypt>=4.1.0
+joblib>=1.3.0
+Werkzeug>=3.0.0
+
+# WSGI server
+gunicorn>=21.2.0
+
+# PostgreSQL (required when DATABASE_URL points to Cloud SQL)
+psycopg2-binary>=2.9.0

@@ -1,0 +1,42 @@
+# Google App Engine — Standard/Flexible configuration
+# Deploy: gcloud app deploy
+
+runtime: python311
+
+entrypoint: gunicorn --config gunicorn.conf.py app:app
+
+# Environment variables — override these in GCP Console > App Engine > Versions
+# or use Secret Manager for sensitive values
+env_variables:
+  # REQUIRED: Replace with a long random string (≥ 32 chars)
+  KRISHX_SECRET: "REPLACE_WITH_A_STRONG_RANDOM_SECRET_KEY_AT_LEAST_32_CHARS"
+  # Database path (App Engine writable temp; use Cloud SQL for production data persistence)
+  DB_PATH: "/tmp/krishx.db"
+  # SMTP (leave empty to print OTPs to App Engine logs)
+  SMTP_HOST: "smtp.gmail.com"
+  SMTP_PORT: "587"
+  SMTP_USER: ""
+  SMTP_PASS: ""
+  # CORS allowed origins (comma-separated, no spaces)
+  ALLOWED_ORIGINS: "https://your-app.com"
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 10
+  target_cpu_utilization: 0.6
+  target_throughput_utilization: 0.6
+  # Cap concurrent requests per instance so App Engine's load balancer routes
+  # new users to a fresh instance instead of queuing them behind a slow
+  # TF inference call (/predict, /pest-detect) on a busy one.
+  max_concurrent_requests: 8
+
+resources:
+  cpu: 2
+  memory_gb: 2.0
+  disk_size_gb: 10
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always
+    redirect_http_response_code: 301

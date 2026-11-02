@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+*.egg-info/
+
+# Training & analysis (not needed at runtime)
+train_*.py
+generate_*.py
+train_*.bat
+*.bat
+analysis_output/
+diagrams/
+dataset2/
+test_data.csv
+train_data.csv
+data_core_original.csv
+crop_production.csv
+
+# Logs & temp
+*.log
+backend_run.log
+pest_training.log
+
+# Database (built fresh or mounted)
+krishx.db
+predictions.db
+
+# Development environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Git
+.git/
+.gitignore

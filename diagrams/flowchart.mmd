@@ -1,0 +1,14 @@
+flowchart TD
+    A[Farmer Inputs Data / Image] --> B{Request Type?}
+    B -->|Soil Metrics| C[POST /recommend_crops]
+    C --> D[RandomForest Soil Prediction]
+    D --> E[Crop Recommendations]
+    E --> F[Frontend Step 2\nCrop Selection]
+    F --> G[POST /recommend_fertilizer]
+    G --> H[Fertilizer Recommendation]
+    B -->|Pest Image| I[POST /detect_pest or /detect_pest_detailed]
+    I --> J[PestDetector (EfficientNetB4)]
+    J --> K[Pest Prediction + Confidence]
+    H --> L[React UI Rendering]
+    K --> L
+    L --> M[Farmer Actions]

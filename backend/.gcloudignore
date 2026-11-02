@@ -1,0 +1,51 @@
+.gcloudignore
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Training and analysis scripts (not needed at runtime)
+train_*.py
+generate_*.py
+*.bat
+
+# Analysis output
+analysis_output/
+
+# Diagrams
+diagrams/
+
+# Development / test data
+dataset2/
+test_data.csv
+train_data.csv
+data_core_original.csv
+crop_production.csv
+
+# Logs
+*.log
+backend_run.log
+pest_training.log
+
+# Local database (production DB is separate)
+krishx.db
+predictions.db
+
+# Secrets / env files
+.env
+.env.local
+.env.*.local
+
+# Model training outputs (keep the final artifacts, skip logs)
+pest_model/training_log*.csv
+pest_model/training_log*.json
+
+# IDE
+.vscode/
+.idea/

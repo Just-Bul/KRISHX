@@ -1,0 +1,39 @@
+# Training dataset — too large for git (thousands of images)
+dataset/
+
+# Training scripts — not needed in production container
+train_pest.py
+train_ml_models.py
+train_optimized.py
+train_dataset2.py
+generate_analysis.py
+generate_comparison_chart.py
+generate_diagrams.py
+generate_performance_matrices.py
+generate_pest_matrix.py
+generate_soil_dataset.py
+generate_val_accuracy_graph.py
+migrate_to_postgres.py
+
+# Training artifacts inside pest_model/
+pest_model/training_log_phase1.csv
+pest_model/training_log_phase2.csv
+pest_model/training_log.csv
+pest_model/classification_report.json
+pest_model/training_summary.json
+pest_model/training_history.png
+pest_model/confusion_matrix.png
+pest_model/class_distribution.png
+
+# Second model file — only pest_model_best.h5 is used at runtime
+pest_model/pest_model_final.h5
+
+# Unused model
+insect_model.pkl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+krishx.db

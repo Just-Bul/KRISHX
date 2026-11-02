@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "KRISHX Agriculture",
+    "slug": "krishx-agriculture",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.krishx.agriculture",
+      "infoPlist": {
+        "NSCameraUsageDescription": "KRISHX uses your camera to capture crop and plant images for AI pest detection.",
+        "NSPhotoLibraryUsageDescription": "KRISHX accesses your photo library so you can select images for pest analysis."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.krishx.agriculture",
+      "versionCode": 1,
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34,
+      "minSdkVersion": 24,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.VIBRATE",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "KRISHX needs access to your photos for pest detection analysis.",
+          "cameraPermission": "KRISHX uses your camera to capture plant images for AI-powered pest identification."
+        }
+      ]
+    ],
+    "newArchEnabled": false,
+    "extra": {
+      "eas": {
+        "projectId": "56835091-cd9e-4bc7-8922-b2576b15a33b"
+      }
+    },
+    "owner": "just-bul"
+  }
+}
